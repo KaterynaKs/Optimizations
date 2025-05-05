@@ -1,8 +1,8 @@
 import React from 'react'
-import { useProducts } from '../context/ProductProvider';
+import { useProductActions } from '../context/ProductProvider';
 
 export default function Product({ product }) {
-  const { changeQuantity, changePrice } = useProducts();
+  const { changeQuantity, changePrice } = useProductActions();
   console.log(`Product ${product.id} rendering`);
 
   const discountedPrice = product.price * (1 - product.discount / 100);
