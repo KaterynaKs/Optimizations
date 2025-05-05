@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {memo} from 'react'
 import { useProductActions } from '../context/ProductProvider';
 
-export default function Product({ product }) {
+function Product({ product }) {
   const { changeQuantity, changePrice } = useProductActions();
   console.log(`Product ${product.id} rendering`);
 
@@ -77,3 +77,5 @@ export default function Product({ product }) {
     </div>
   );
 };
+
+export default memo(Product);
