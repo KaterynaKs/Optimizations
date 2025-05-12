@@ -69,7 +69,7 @@ function Product({ product }) {
           <div className="flex">
             <button
               onClick={() => dispatch(IncrementPriceAction({
-                ig: product.id,
+                id: product.id,
                 amount: -10
               }))}
               className="px-2 py-1 bg-red-200 rounded-l"
@@ -78,7 +78,7 @@ function Product({ product }) {
             </button>
             <button
               onClick={() => dispatch(IncrementPriceAction({
-                ig: product.id,
+                id: product.id,
                 amount: 10
               }))}
               className="px-2 py-1 bg-green-200 rounded-r"
@@ -86,7 +86,7 @@ function Product({ product }) {
               +$10
             </button>
           </div>
-        </div>
+        </div>n
       </div>
     </div>
   );
