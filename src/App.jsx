@@ -1,13 +1,13 @@
 import ProductList from './components/ProductList';
 import SortPanel from './components/SortPanel';
 import Statistics from './components/Statistics';
-import { ProductProvider } from './context/ProductProvider';
+// import { ProductProvider } from './context/ProductProvider';
 
 const App = () => {
   console.log("App rendering");
 
   return (
-    <ProductProvider>
+    // <ProductProvider>
       <div className="container mx-auto p-4">
         <header className="bg-blue-50 p-4 mb-6 rounded-lg shadow-sm">
           <h1 className="text-3xl font-bold text-blue-800">
@@ -34,7 +34,7 @@ const App = () => {
         <SortPanel />
         <ProductList />
       </div>
-    </ProductProvider>
+    // </ProductProvider>
   );
 };
 

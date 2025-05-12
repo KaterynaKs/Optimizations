@@ -1,11 +1,12 @@
 import React from 'react'
-import { useProducts } from '../context/ProductProvider';
+import { useSelector } from 'react-redux';
+// import { useProducts } from '../context/ProductProvider';
 
 export default function Statistics() {
-  const { statistics } = useProducts(); // <-- получаем готовую статистику
+  // const { statistics } = useProducts(); // <-- получаем готовую статистику
   console.log("Statistics rendering");
-
-  const stats = statistics;
+const stats = useSelector(state => state.stats)
+  // const stats = statistics;
 
   return (
     <div className="mb-8 p-6 border rounded-lg bg-blue-50 shadow-sm">
